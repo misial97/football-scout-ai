@@ -1,0 +1,33 @@
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+
+# Cachés y archivos generados por Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Configuración local de Streamlit
+.streamlit/secrets.toml
+
+# Archivos del sistema y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Salidas generadas que pueden regenerarse con los scripts del proyecto
+ranking_delanteros.csv
