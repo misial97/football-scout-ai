@@ -154,7 +154,7 @@ Analiza delanteros con al menos 900 minutos y calcula una puntuación de 0 a 100
 - `Gls_90`: 50 %
 - `Ast_90`: 20 %
 - `SoT_90`: 20 %
-- `Precision_tiro`: 10 %
+- `Shot_accuracy`: 10 %
 
 El resultado se muestra en la terminal y se guarda en `ranking_delanteros.csv`. El archivo se puede regenerar y está excluido de Git.
 

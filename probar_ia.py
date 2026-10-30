@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 
-# Cargar las variables del archivo .env
+# Load variables from the .env file
 load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
@@ -13,13 +13,13 @@ if not api_key:
         "No se ha encontrado GEMINI_API_KEY en el archivo .env"
     )
 
-# Crear el cliente de Gemini
+# Create the Gemini client
 client = genai.Client(api_key=api_key)
 
-# Hacer una peticion sencilla
-respuesta = client.models.generate_content(
+# Make a simple request
+response = client.models.generate_content(
     model="gemini-3.5-flash-lite",
     contents="Responde en español: ¿qué es un informe de scouting futbolístico?"
 )
 
-print(respuesta.text)
+print(response.text)
