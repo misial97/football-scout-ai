@@ -31,3 +31,4 @@ Thumbs.db
 
 # Salidas generadas que pueden regenerarse con los scripts del proyecto
 ranking_delanteros.csv
+.env
