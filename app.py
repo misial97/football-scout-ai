@@ -34,7 +34,7 @@ st.sidebar.header("Filtros de scouting")
 
 profile = st.sidebar.selectbox(
     "Perfil de jugador",
-    ["Delantero", "Centrocampista", "Defensa", "Portero"],
+    ["Delantero", "Centrocampista", "Defensa"],
 )
 
 minimum_minutes = st.sidebar.slider(
@@ -49,7 +49,6 @@ positions = {
     "Delantero": "FW",
     "Centrocampista": "MF",
     "Defensa": "DF",
-    "Portero": "GK",
 }
 
 target_position = positions[profile]
@@ -68,7 +67,6 @@ sort_indicators = {
     "Delantero": "Gls_90",
     "Centrocampista": "Ast_90",
     "Defensa": "Int",
-    "Portero": "Save%",
 }
 
 sort_indicator = sort_indicators[profile]
@@ -93,7 +91,7 @@ visible_columns = [
     c for c in [
         "Player", "Squad", "Comp", "Pos", "Age",
         "Min", "Gls", "Ast", "Gls_90", "Ast_90",
-        "Sh", "SoT", "Int", "TklW", "Save%"
+        "Sh", "SoT", "Int", "TklW"
     ]
     if c in shortlist.columns
 ]

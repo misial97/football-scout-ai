@@ -30,8 +30,11 @@ numeric_columns = ["Age", "MP", "Min", "Gls", "Ast", "Sh", "SoT"]
 for column in numeric_columns:
     df[column] = pd.to_numeric(df[column], errors="coerce")
 
-# 4. Remove rows without essential information
+# 4. Remove rows without essential information or goalkeeper records
 df = df.dropna(subset=["Player", "Pos", "Min"])
+df = df[
+    ~df["Pos"].str.split(",").apply(lambda positions: "GK" in positions)
+].copy()
 
 # 5. Calculate statistics per 90 minutes
 # Only calculate these indicators when minutes have been played.

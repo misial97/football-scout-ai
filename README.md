@@ -8,7 +8,7 @@ El proyecto combina análisis de datos y una interfaz web:
 
 1. Lee un conjunto de estadísticas de jugadores.
 2. Limpia los datos y calcula métricas por cada 90 minutos.
-3. Permite filtrar jugadores por perfil: delantero, centrocampista, defensa o portero.
+3. Permite filtrar jugadores por perfil: delantero, centrocampista o defensa.
 4. Ordena los resultados según un indicador principal del perfil seleccionado.
 5. Envía las estadísticas del jugador seleccionado a Gemini para generar un informe interpretativo.
 6. Puede crear un ranking ponderado de delanteros.
@@ -117,7 +117,7 @@ Streamlit abrirá la aplicación en el navegador, normalmente en `http://localho
 
 En la barra lateral se puede seleccionar:
 
-- **Perfil de jugador:** delantero, centrocampista, defensa o portero.
+- **Perfil de jugador:** delantero, centrocampista o defensa.
 - **Minutos mínimos:** filtra a los jugadores con suficiente participación.
 
 La aplicación muestra los candidatos ordenados inicialmente por:
@@ -127,7 +127,6 @@ La aplicación muestra los candidatos ordenados inicialmente por:
 | Delantero | `Gls_90` |
 | Centrocampista | `Ast_90` |
 | Defensa | `Int` |
-| Portero | `Save%` |
 
 Después se puede seleccionar un jugador y pulsar **Generar informe de scouting**. Esa acción necesita una `GEMINI_API_KEY` válida y conexión a Internet.
 
